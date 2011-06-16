@@ -1,0 +1,18 @@
+[user]
+	name = Andrea Bernardo Ciddio
+	email = bcandrea@gmail.com
+
+[github]
+	user = bcandrea
+
+[color]
+	ui = auto
+
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	hist = log --pretty=format:\"%Cgreen%h %ad%Creset | %s%d [%an]\" --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
