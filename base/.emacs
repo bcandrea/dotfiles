@@ -36,7 +36,7 @@
  '(ecb-layout-window-sizes (quote (("left14" (0.1702127659574468 . 0.6938775510204082) (0.1702127659574468 . 0.2857142857142857)))))
  '(ecb-options-version "2.40")
  '(ecb-primary-secondary-mouse-buttons (quote mouse-1--C-mouse-1))
- '(ecb-source-path (quote ("~" "~/tmp" "~/perforce/depot/test/mrts/main")))
+ '(ecb-source-path (quote ("~")))
  '(ecb-tip-of-the-day nil))
 
 (require 'color-theme)
