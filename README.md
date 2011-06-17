@@ -6,7 +6,8 @@ A more or less standard set of config files, plus a rakefile to manage them.
 Installation & Usage
 ====================
 
-The installation process uses rake. Use the `list` task to display all the dotfiles:
+The installation process uses rake. Use the `list` task (or no task, it is the default) to 
+display all the dotfiles:
 
     $ rake list
 
