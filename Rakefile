@@ -29,7 +29,7 @@ end
 def get_dotfiles
   files = []
   Dir.glob(File.join(ROOT_DIR, 'base', '*'), File::FNM_DOTMATCH) do |f|
-    unless f.end_with? '.'
+    unless f.end_with? '.' or File.directory? f # TODO handle directories
       f = File.basename f
       yield f if block_given?
       files << f
