@@ -50,9 +50,6 @@
   ;; If there is more than one, they won't work right.
  )
 
-
-(load-file "~/.emacs.d/p4.el")
-
 (set-default-font "-apple-Monaco-normal-normal-normal-*-14-*-*-*-*-0-iso10646-1")
 
 (require 'ruby-mode)
@@ -64,7 +61,6 @@
 (add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Capfile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Vagrantfile$" . ruby-mode))
-
 
 (autoload 'markdown-mode "markdown-mode.el"
    "Major mode for editing Markdown files" t)

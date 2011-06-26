@@ -55,7 +55,7 @@ def diff(dotfile)
   new_dir = File.join(ROOT_DIR, 'diffs', 'new')
   FileUtils.mkdir_p old_dir
   FileUtils.mkdir_p new_dir
-  FileUtils.cp File.join(HOME_DIR, dotfile), new_dir
+  FileUtils.cp File.join(HOME_DIR, dotfile), new_dir if File.exists? File.join(HOME_DIR, dotfile)
   FileUtils.cp File.join(ROOT_DIR, 'base', dotfile), old_dir
   Dir.chdir File.join(ROOT_DIR, 'diffs')
   `#{DIFF} #{File.join 'old', dotfile} #{File.join 'new', dotfile}`
