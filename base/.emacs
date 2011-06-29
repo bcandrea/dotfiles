@@ -29,6 +29,8 @@
 ;;   imenu support, and the semantic navigator
 (semantic-load-enable-code-helpers)
 
+(add-to-list 'load-path "~/.emacs.d")
+
 (add-to-list 'load-path "~/.emacs.d/ecb-2.40")
 (load-file "~/.emacs.d/ecb-2.40/ecb.el")
 
@@ -72,3 +74,7 @@
    "Major mode for editing Markdown files" t)
 (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.markdown$" . markdown-mode))
+
+(require 'php-mode)
+(add-to-list 'auto-mode-alist '("\\php$" . php-mode))
+
