@@ -62,7 +62,7 @@ def diff(dotfile)
 end
 
 # Writes the contents of a dotfile, applying patches if necessary.
-def install(dotfile)
+def write(dotfile)
   new_dir = File.join(ROOT_DIR, 'diffs', 'new')
   FileUtils.mkdir_p new_dir
   FileUtils.cp File.join(ROOT_DIR, 'base', dotfile), new_dir
@@ -143,7 +143,7 @@ task :install do
         next
       end
     end
-    install(f)
+    write(f)
     log f, 'written', :label_width => LABEL_WIDTH
   end
 end
