@@ -15,4 +15,9 @@
 	br = branch
 	hist = log --pretty=format:\"%Cgreen%h %ad%Creset | %s%d [%an]\" --graph --date=short
 	type = cat-file -t
-	dump = cat-file -p
+  dump = cat-file -p
+  # fs, feature start
+  fs = !git flow feature start $1 && grb publish feature/$1
+  # ff, feature finish. Always push to the final branch (remote)
+  # if it was successful
+  ff = !git flow feature finish $1 && git push
