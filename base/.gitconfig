@@ -17,7 +17,8 @@
 	type = cat-file -t
   dump = cat-file -p
   # fs, feature start
-  fs = !git flow feature start $1 && grb publish feature/$1
+  fs = "!f() { git flow feature start $1 && grb push; }; f"
   # ff, feature finish. Always push to the final branch (remote)
   # if it was successful
-  ff = !git flow feature finish $1 && git push
+  # after the push, remove the remote feature branch with 'git push origin :feature/something'
+  ff = "!f() { branch_name=`git symbolic-ref HEAD 2>/dev/null` && git flow feature finish && git push && git push origin :$branch_name; }; f"
